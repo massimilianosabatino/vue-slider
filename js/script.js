@@ -52,5 +52,8 @@ createApp({
     setToCurrentImg(){
         this.currentImg = Number(event.currentTarget.getAttribute('position-n'));
     }
+  },
+  mounted() {
+    const autoPlay = setInterval(this.nextImg, 3000);
   }
 }).mount('#app')
