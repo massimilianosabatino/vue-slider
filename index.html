@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <!-- Big image -->
-                <div class="item">
+                <div class="item" @mouseover="stopAutoPlay">
                     <img :src="slides[currentImg].image" alt="Spiderman" />
                     <div class="text">
                         <h3>{{ slides[currentImg].title }}</h3>
@@ -46,7 +46,7 @@
         </div>
         <!-- /Slider application -->
     </div>
-    
+
     <!-- Vue.js -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <!-- /Vue.js -->

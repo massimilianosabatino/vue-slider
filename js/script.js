@@ -51,9 +51,13 @@ createApp({
     //Set selected img to active state
     setToCurrentImg(){
         this.currentImg = Number(event.currentTarget.getAttribute('position-n'));
+    },
+    stopAutoPlay(){
+        clearInterval(this.autoPlay);
+        console.log('sono sopra')
     }
   },
   mounted() {
-    const autoPlay = setInterval(this.nextImg, 3000);
+    this.autoPlay = setInterval(this.nextImg, 3000)
   }
 }).mount('#app')
