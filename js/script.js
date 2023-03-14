@@ -22,8 +22,6 @@ const slides = [
     }
 ];
 
-console.log(slides);
-
 //App instance
 const { createApp } = Vue
 
@@ -35,18 +33,21 @@ createApp({
     }
   },
   methods: {
+    //cycle image forward
     nextImg(){
         this.currentImg++;
         if(this.currentImg > slides.length - 1){
             this.currentImg = 0;
         };
     },
+    //cycle image backwards
     prevImg(){
         this.currentImg--;
         if(this.currentImg === 0){
             this.currentImg = slides.length - 1;
         };
     },
+    //Set selected img to active state
     setToCurrentImg(){
         this.currentImg = Number(event.currentTarget.getAttribute('position-n'));
     }
