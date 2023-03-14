@@ -55,9 +55,15 @@ createApp({
     stopAutoPlay(){
         clearInterval(this.autoPlay);
         console.log('sono sopra')
+        console.log(this.autoPlay)
+    },
+    reStartAutoPlay(){
+        this.autoPlay = setInterval(this.nextImg, 3000)
+        console.log(this.autoPlay)
     }
   },
   mounted() {
     this.autoPlay = setInterval(this.nextImg, 3000)
+    console.log(this.autoPlay)
   }
 }).mount('#app')

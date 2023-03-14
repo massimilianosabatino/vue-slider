@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <!-- Big image -->
-                <div class="item" @mouseover="stopAutoPlay">
+                <div class="item" @mouseEnter="stopAutoPlay" @mouseleave="reStartAutoPlay">
                     <img :src="slides[currentImg].image" alt="Spiderman" />
                     <div class="text">
                         <h3>{{ slides[currentImg].title }}</h3>
