@@ -46,6 +46,9 @@ createApp({
         if(this.currentImg === 0){
             this.currentImg = slides.length - 1;
         };
+    },
+    setToCurrentImg(){
+        this.currentImg = Number(event.currentTarget.getAttribute('position-n'));
     }
   }
 }).mount('#app')

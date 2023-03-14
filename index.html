@@ -27,12 +27,12 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevImg"></div>
                     <div class="next" @click="nextImg"></div>
-                    <template v-for="(item, key) in slides">
-                        <div class="thumb active" v-if="key === currentImg">
-                            <img :src="slides[key].image" alt="">
+                    <template v-for="(item, index) in slides" :key="index">
+                        <div class="thumb active" v-if="index === currentImg" @click="setToCurrentImg" :position-n="index">
+                            <img :src="slides[index].image" alt="">
                         </div>
-                        <div class="thumb" v-else>
-                            <img :src="slides[key].image" alt="">
+                        <div class="thumb" v-else @click="setToCurrentImg" :position-n="index">
+                            <img :src="slides[index].image" alt="">
                         </div>
                     </template>
                     <!-- <div class="thumb active">
