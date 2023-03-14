@@ -51,6 +51,9 @@ createApp({
     //Set selected img to active state
     setToCurrentImg(){
         this.currentImg = Number(event.currentTarget.getAttribute('position-n'));
+        //Si poteva passare index come argomento della funzione, sia in js che in html
+        //e dopo impostare currentImg = a index. Non era più necessario il custom attribute 
+        //this.currentImg = index;
     },
     stopAutoPlay(){
         clearInterval(this.autoPlay);

@@ -27,8 +27,8 @@
                 <!-- Thumbnails -->
                 <div class="thumbs">
                     <!-- Prev and next button -->
-                    <div class="prev" @click="prevImg"></div>
-                    <div class="next" @click="nextImg"></div>
+                    <div class="prev" @click="prevImg" @mouseEnter="stopAutoPlay" @mouseleave="reStartAutoPlay"></div>
+                    <div class="next" @click="nextImg" @mouseEnter="stopAutoPlay" @mouseleave="reStartAutoPlay"></div>
                     <!-- /Prev and next button -->
                     <!-- Template for thumbnails image -->
                     <template v-for="(item, index) in slides" :key="index">
