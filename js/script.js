@@ -42,10 +42,11 @@ createApp({
     },
     //cycle image backwards
     prevImg(){
-        this.currentImg--;
         if(this.currentImg === 0){
             this.currentImg = slides.length - 1;
-        };
+        }else {
+            this.currentImg--;
+        }
     },
     //Set selected img to active state
     setToCurrentImg(){
